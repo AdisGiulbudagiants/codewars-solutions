@@ -13,11 +13,13 @@
 
 // console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]))
 
-const arr = [1, 2, 3, 2, 1, 3, 1, 1, 2]
+function findOdd(el) {
+  const count = el.reduce((acc, val) => {
+    acc.set(val, (acc.get(val) || 0) + 1)
+    console.log(acc)
+    return acc
+  }, new Map())
+  return count
+}
 
-const count = arr.reduce((acc, val) => {
-  acc.set(val, (acc.get(val) || 0) + 1)
-  return acc
-}, new Map())
-
-console.log(count)
+console.log(findOdd([1, 2, 3, 2, 1, 3, 1, 1, 2]))
