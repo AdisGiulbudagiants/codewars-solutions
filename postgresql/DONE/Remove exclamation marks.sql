@@ -1,0 +1,1 @@
+SELECT s, REGEXP_REPLACE(s, '!', '','gi') AS res FROM removeexclamationmarks;
