@@ -1,0 +1,1 @@
+SELECT n, (n - 1) / 2 + CASE WHEN (n - 1) % 2 != 0 THEN 1 ELSE 0 END AS res FROM oddcount;
