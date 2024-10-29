@@ -1,0 +1,1 @@
+SELECT month, (month + 2) / 3 AS res FROM quarterof;
